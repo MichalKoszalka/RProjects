@@ -4,6 +4,7 @@ geneticFitness = function(x) {
              A[A == i] <- x[i];
              A[A == -i] <- !x[i];
        }
+      print(A)
        result = 0;
        for(r in 1 : nrow(A)) {
          rowSum1 <- FALSE;
@@ -13,7 +14,9 @@ geneticFitness = function(x) {
            } else {
              rowSum1 <- rowSum1 || A[r,c];
            }
+           print(A[r,c]);
          }
+         print(rowSum1)
         if(rowSum1 == TRUE) {
             result = result + 1;  
         }
